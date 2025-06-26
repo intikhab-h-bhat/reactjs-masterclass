@@ -119,25 +119,25 @@ React solves these problems by:
 
 ### Benefits of Using React:
 
-#### 🎯 **Predictable**
+####  **Predictable**
 ```javascript
 // If count is 5, the UI will ALWAYS show 5
 // No manual DOM manipulation needed
 ```
 
-#### ♻️ **Reusable**
+#### ♻ **Reusable**
 ```javascript
 // Create a Button component once
 // Use it everywhere: <Button>, <Button>, <Button>
 ```
 
-#### 🔧 **Maintainable**
+####  **Maintainable**
 ```javascript
 // All button logic is in one place
 // Easy to find and fix bugs
 ```
 
-#### ⚡ **Fast**
+####  **Fast**
 ```javascript
 // React only updates what actually changed
 // Not the entire page
