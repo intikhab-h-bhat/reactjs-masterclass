@@ -4,7 +4,6 @@
 
 **Duration:** 2 Sessions × 2 Hours Each  
 **Prerequisites:** HTML, CSS, JavaScript  
-**Target Audience:** Programming beginners with web development basics
 
 ---
 
@@ -12,13 +11,10 @@
 **Duration:** 2 Hours
 
 ## Session Agenda
-1. What is ReactJS? (20 min)
-2. Why do we need React? (15 min)
-3. Setting up Development Environment (25 min)
-4. Your First React App (30 min)
-5. Understanding JSX (20 min)
-6. Components Basics (25 min)
-7. Session Summary & Q&A (5 min)
+1. What is ReactJS? (10 min)
+2. Why do we need React? (10 min)
+3. Setting up Development Environment (15 min)
+
 
 ## Learning Goals
 By the end of this session, you will:
