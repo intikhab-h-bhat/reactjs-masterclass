@@ -1,4 +1,4 @@
-# Complete ReactJS Beginner Lecture Series
+# ReactJS Tutorial
 
 ## Course Overview
 
@@ -219,7 +219,7 @@ my-first-react-app/
 
 ## 4. Your First React App
 
-### 🔍 Understanding the Default App
+###  Understanding the Default App
 
 Let's look at `src/App.js`:
 
@@ -280,7 +280,153 @@ function App() {
 export default App;
 ```
 
-**Save the file and watch it update automatically!** 🎉
+**Save the file and watch it update automatically!** 
+
+---
+---
+
+## 5. Understanding JSX
+
+###  What is JSX?
+
+JSX stands for **JavaScript XML**. It's a syntax extension that lets you write HTML-like code inside JavaScript.
+
+### JSX vs HTML Comparison
+
+**HTML:**
+```html
+<div class="container">
+    <h1>Hello World</h1>
+    <p>This is a paragraph</p>
+</div>
+```
+
+**JSX:**
+```javascript
+<div className="container">
+    <h1>Hello World</h1>
+    <p>This is a paragraph</p>
+</div>
+```
+
+###  Key Differences
+
+1. **className instead of class**
+```javascript
+// HTML
+<div class="my-class">
+
+// JSX
+<div className="my-class">
+```
+
+2. **Self-closing tags need forward slash**
+```javascript
+// HTML
+<img src="image.jpg">
+<br>
+
+// JSX
+<img src="image.jpg" />
+<br />
+```
+
+3. **JavaScript expressions in curly braces**
+```javascript
+const name = "John";
+const age = 25;
+
+// JSX
+<div>
+    <h1>Hello {name}</h1>
+    <p>You are {age} years old</p>
+    <p>Next year you'll be {age + 1}</p>
+</div>
+```
+
+###  JSX Rules
+
+1. **Must return a single parent element**
+```javascript
+// ❌ Wrong - Multiple root elements
+function App() {
+  return (
+    <h1>Title</h1>
+    <p>Paragraph</p>
+  );
+}
+
+// ✅ Correct - Single root element
+function App() {
+  return (
+    <div>
+      <h1>Title</h1>
+      <p>Paragraph</p>
+    </div>
+  );
+}
+
+// ✅ Also correct - React Fragment
+function App() {
+  return (
+    <>
+      <h1>Title</h1>
+      <p>Paragraph</p>
+    </>
+  );
+}
+```
+
+2. **JavaScript expressions go in curly braces**
+```javascript
+const greeting = "Hello";
+const user = { name: "Alice", age: 30 };
+
+return (
+  <div>
+    <h1>{greeting} {user.name}!</h1>
+    <p>Age: {user.age}</p>
+    <p>Born in: {2024 - user.age}</p>
+  </div>
+);
+```
+
+3. **Inline styles are objects**
+```javascript
+// HTML
+<div style="color: red; font-size: 20px;">
+
+// JSX
+<div style={{color: 'red', fontSize: '20px'}}>
+```
+
+###  Exercise 2: JSX Practice
+
+Create a personal introduction using JSX:
+
+```javascript
+function App() {
+  const firstName = "Your Name";
+  const lastName = "Your Last Name";
+  const hobbies = ["Reading", "Gaming", "Coding"];
+  const favoriteColor = "blue";
+
+  return (
+    <div style={{padding: '20px', fontFamily: 'Arial'}}>
+      <h1 style={{color: favoriteColor}}>
+        Hello, I'm {firstName} {lastName}
+      </h1>
+      <p>My hobbies include:</p>
+      <ul>
+        <li>{hobbies[0]}</li>
+        <li>{hobbies[1]}</li>
+        <li>{hobbies[2]}</li>
+      </ul>
+      <p>Today is {new Date().toDateString()}</p>
+    </div>
+  );
+}
+```
 
 ---
 
