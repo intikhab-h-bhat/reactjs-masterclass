@@ -142,6 +142,147 @@ React solves these problems by:
 
 
 ---
+## 3. Setting Up Development Environment
+
+### Tools We Need
+
+1. **Node.js** - JavaScript runtime
+2. **npm** - Package manager
+3. **VS Code** - Code editor
+4. **Create React App** - React project generator
+
+### Step 1: Install Node.js
+
+1. Go to [nodejs.org](https://nodejs.org)
+2. Download the LTS (Long Term Support) version
+3. Install it (default settings are fine)
+4. Verify installation:
+
+```bash
+node --version
+npm --version
+```
+
+### Step 2: Set Up VS Code
+
+1. Download VS Code from [code.visualstudio.com](https://code.visualstudio.com)
+2. Install these helpful extensions:
+   - **ES7+ React/Redux/React-Native snippets**
+   - **Bracket Pair Colorizer**
+   - **Auto Rename Tag**
+   - **Prettier - Code formatter**
+
+### Step 3: Create Your First React App
+
+```bash
+# Create a new React app
+npx create-react-app my-first-react-app
+
+# Navigate to the project folder
+cd my-first-react-app
+
+# Start the development server
+npm start
+```
+
+### What Just Happened?
+
+Create React App set up:
+- A complete React project structure
+- Development server with hot reloading
+- Build tools (Webpack, Babel)
+- Testing environment
+
+### Project Structure Overview
+
+```
+my-first-react-app/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+├── package.json
+└── README.md
+```
+
+**Key Files:**
+- `public/index.html` - The main HTML file
+- `src/index.js` - Entry point of your React app
+- `src/App.js` - Main App component
+- `package.json` - Project dependencies and scripts
+
+---
+
+## 4. Your First React App
+
+### 🔍 Understanding the Default App
+
+Let's look at `src/App.js`:
+
+```javascript
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+###  Let's Break It Down
+
+1. **Import statements** - Bring in dependencies
+2. **Function component** - A JavaScript function that returns JSX
+3. **Return statement** - What gets displayed on screen
+4. **Export statement** - Makes the component available to other files
+
+### Exercise 1: Customize Your App
+
+Replace the content of `src/App.js` with:
+
+```javascript
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Welcome to My React Journey!</h1>
+        <p>This is my first React application.</p>
+        <p>Today's date: {new Date().toLocaleDateString()}</p>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+**Save the file and watch it update automatically!** 🎉
+
+---
 
 
   
